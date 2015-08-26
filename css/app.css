@@ -8298,7 +8298,7 @@ breadcrumbs {
         padding-left: 10px; }
 
 body {
-  background-color: #FFF;
+  background-color: #f0f0f0;
   font-size: 15px; }
   body h1 {
     font-size: 2em;
@@ -8330,7 +8330,7 @@ body {
     min-height: calc(100vh - 115px);
     margin: 0;
     padding-bottom: 30px;
-    background-color: #FFF; }
+    background-color: #f0f0f0; }
     body main .card {
       margin: 0.5rem 1rem; }
 
@@ -8374,26 +8374,27 @@ nav autocomplete ul {
     padding: 3px; }
 
 nav {
-  box-shadow: none;
-  height: calc(64px + 48px); }
+  transition: box-shadow .25s;
+  margin-bottom: 15px;
+  height: calc(64px + 48px);
+  color: #fff; }
   nav .brand-logo, nav ul li a {
-    color: #fb4400; }
+    color: #dddddd; }
   nav img {
     height: 64px; }
   nav a, nav li a {
-    color: black; }
+    color: #dddddd; }
   nav #nav-top {
-    background-color: #f1f1f1;
-    border-bottom: 1px solid #e5e5e5;
+    background-color: #638EEA;
     margin-bottom: 0;
-    height: 64px; }
+    height: 64px;
+    z-index: 1; }
   nav #nav-bottom {
-    background-color: #FFF;
-    border-bottom: 1px solid #ebebeb;
+    background-color: #3367d6;
     height: 48px; }
     nav #nav-bottom .nav-list {
       position: relative;
-      background-color: #fff;
+      background-color: #3367d6;
       margin: 0 auto;
       white-space: nowrap; }
       nav #nav-bottom .nav-list .nav-item {
@@ -8404,23 +8405,24 @@ nav {
         height: 48px;
         margin: 0;
         text-transform: uppercase;
-        letter-spacing: .8px; }
+        letter-spacing: .8px;
+        color: #dddddd; }
         nav #nav-bottom .nav-list .nav-item a {
-          color: #fb4400;
           display: block;
           height: 100%;
+          color: #dddddd;
           -webkit-transition: color 0.28s ease;
           -moz-transition: color 0.28s ease;
           -o-transition: color 0.28s ease;
           -ms-transition: color 0.28s ease;
           transition: color 0.28s ease; }
           nav #nav-bottom .nav-list .nav-item a:hover {
-            color: #ff8d62; }
+            color: white; }
         nav #nav-bottom .nav-list .nav-item.disabled a {
-          color: #ff8d62;
+          color: white;
           cursor: default; }
         nav #nav-bottom .nav-list .nav-item.active {
-          background-color: #FFF;
+          background-color: #3367d6;
           border-bottom: 2px solid #fb4400; }
 
 /*# sourceMappingURL=app.css.map */

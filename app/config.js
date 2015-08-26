@@ -16,6 +16,10 @@ define({
         '/contacts/:id': {
             location: 'contact/ContactDetail',
             label: 'Contact detail'
+        },
+    '/test3': {
+            location: 'test3/Test3',
+            label: 'longtest'
         }
     },
     modules: [
@@ -23,7 +27,8 @@ define({
         'autocomplete',
         'ngResource',
         'ngSanitize',
-        'ngRoute'
+        'ngRoute',
+        'ui.materialize'
     ],
     defaultRedirect: '/home'
 });

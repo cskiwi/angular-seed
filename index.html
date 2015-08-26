@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Angular Seed Demo</title>
+    <title>Angular Seed Demo</title>
+    <link href="css/app.css" rel="stylesheet"/>
 </head>
 <body>
-	<h1>PhoneBook App</h1>
-	<p><em>The purpose of this app is just to demonstrate this AngularJS seed.</em></p>
-	<hr>
-	<div ng-view></div>
-	<script src="/js/lib/angular.js"></script>
-	<script src="/js/lib/require.js" data-main="/js/app/main"></script>
+<header ng-controller="NavigationController">
+    <nav>
+        <div class="nav-wrapper">
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <a href="#/" class="brand-logo">Some Logo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+</header>
+
+<div ng-view></div>
+
+<!-- Other scripts-->
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="lib/materialize.min.js"></script>
+
+<!-- Angular scripts -->
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-sanitize.min.js"></script>
+<script src="lib/angular-resource.min.js"></script>
+<script src="lib/angular-materialize.js"></script>
+<script src="lib/angular-route.min.js"></script>
+<script src="lib/ng-breadcrumbs.js"></script>
+
+<!-- load this last -->
+<script src="lib/require.js" data-main="app/main"></script>
 </body>
 </html>

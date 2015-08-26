@@ -15,24 +15,23 @@ The directory structure is flexible. It doesn't have to be in the following stru
 
 	root
 	|
-	├── js
+	|
+	├── app
 	|   |
-	|   ├── app
-	|   |   |
-	|   |   ├── controllers
-	|   |   ├── directives
-	|   |   ├── filters
-	|   |   ├── services
-	|   |   ├── views
-	|   |   |
-	|   |   ├── config.js
-	|   |   └── main.js
+	|   ├── controllers
+	|   ├── directives
+	|   ├── filters
+	|   ├── services
+	|   ├── views
 	|   |
-	|   └── lib
-	|       |
-	|       ├── angular.js
-	|       ├── ng-app.js
-	|       └── require.js
+	|   ├── config.js
+	|   └── main.js
+	|
+	├── lib
+	|   |
+	|   ├── Libraries
+	|   ├── ng-app.js
+	|   └── require.js
 	|
 	└── index.html
 
@@ -46,25 +45,39 @@ Configuration
 
 ````javascript
 define({
-	appName: 'YourAppName',
-	appDir: '/js/app',
-	libDir: '/js/lib',
-	routes: {
-		'/path' : 'subdir/Controller1',
-		'/path/with/:id' : 'subdir/Controller2',
-		'/more/path' : 'Controller3'
-	},
-	defaultRedirect: '/path'
+    appName: 'YourAppName',
+    appDir: 'app', // don't touch this
+    libDir: '../lib', // don't touch this
+    routes: {
+        '/path': {
+            location: 'subdirController1',
+            label: 'Label'
+        },
+        '/path/with/:id': {
+            location: 'subdir/Controller1',
+            label: 'yet Other Label'
+        },
+        '/more/with: {
+            location: 'Controller1'
+            label: 'last label'
+        }        
+    },
+    modules: [
+        'ng-breadcrumbs',
+        'ngResource',
+        'ngSanitize',
+        'ngRoute'
+    ],
+    defaultRedirect: '/'
 });
 ````
-
 Notice that, the controllers and views can be organized by placing them under sub-directories. But it still works, if you wish to place them directly under the `controllers` and `views` directories.
 
 
 Seed Project : PhoneBook App
 ----------------------------
 
-The PhoneBook example project included in this seed has two controllers (`Contact` and `ContactDetail`) and one service (`contactService`). The purpose is simply retrieving data from a model and populate the view accordingly.
+The seed example project included in this seed has two controllers (`Contact` and `ContactDetail`) and one service (`contactService`). The purpose is simply retrieving data from a model and populate the view accordingly.
 
 
 Inspired by
@@ -72,3 +85,4 @@ Inspired by
 
 - [Dynamically Loading Controllers and Views with AngularJS and RequireJS](http://weblogs.asp.net/dwahlin/archive/2013/05/22/dynamically-loading-controllers-and-views-with-angularjs-and-requirejs.aspx)
 - [Angular RequireJS Seed](https://github.com/tnajdek/angular-requirejs-seed)
+- [Angular seed](https://github.com/mohislm/angular-seed)

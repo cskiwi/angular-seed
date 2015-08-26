@@ -1,0 +1,11 @@
+<ol class="ab-nav breadcrumb">
+    <div class="row">
+        <div class="col s10 offset-s1">
+            <li ng-repeat="breadcrumb in breadcrumbs.get() track by breadcrumb.path" ng-class="{ active: $last }">
+                <a ng-if="!$last" ng-href="#{{ breadcrumb.path }}" ng-bind-html="breadcrumb.label"
+                   class="margin-right-xs"></a>
+                <span ng-if="$last" ng-bind-html="breadcrumb.label"></span>
+            </li>
+        </div>
+    </div>
+</ol>

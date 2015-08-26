@@ -14,7 +14,16 @@ require(['config'], function(config) {
 	require(
 		[
 			'app',
-			'services/contactService'
+
+            // services
+			'services/contactService',
+
+            // directives
+            'directives/breadcrumbDirective',
+
+            // custom controllers
+            'controllers/Navigation'
+
 		],
 		function (app) {
 			angular.bootstrap(document, [app.name]);

@@ -17,6 +17,9 @@ require(['config'], function(config) {
 
             // services
 			'services/contactService',
+            'services/autocompleteService',
+            'services/searchService',
+            'services/userService',
 
             // directives
             'directives/breadcrumbDirective',

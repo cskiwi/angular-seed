@@ -8297,4 +8297,130 @@ breadcrumbs {
         color: #ccc;
         padding-left: 10px; }
 
+body {
+  background-color: #FFF;
+  font-size: 15px; }
+  body h1 {
+    font-size: 2em;
+    padding: 0;
+    color: #fb4400; }
+  body h2 {
+    font-size: 1.5em;
+    padding: 0;
+    color: #fb4400; }
+  body h3 {
+    font-size: 1.17em;
+    padding: 0;
+    color: #fb4400; }
+  body h4 {
+    font-size: 1.33em;
+    padding: 0;
+    color: #fb4400; }
+  body h5 {
+    font-size: 0.83em;
+    padding: 0;
+    color: #fb4400; }
+  body h6 {
+    font-size: 0.67em;
+    padding: 0;
+    color: #fb4400; }
+  body a {
+    color: #fb4400; }
+  body main {
+    min-height: calc(100vh - 115px);
+    margin: 0;
+    padding-bottom: 30px;
+    background-color: #FFF; }
+    body main .card {
+      margin: 0.5rem 1rem; }
+
+nav autocomplete .input-field input[type="search"] {
+  margin: 10px 0;
+  height: calc(100% - 20px);
+  line-height: 40px;
+  background-color: white;
+  border: 1px solid #b9b9b9;
+  color: #AAA; }
+  nav autocomplete .input-field input[type="search"]:focus {
+    border: 1px solid #b9b9b9; }
+nav autocomplete .input-field input[type="search"]:focus {
+  color: #444; }
+nav autocomplete label {
+  line-height: 40px; }
+nav autocomplete label i, nav autocomplete .input-field input[type=search] ~ .mdi-navigation-close {
+  height: calc(100% - 20px);
+  line-height: 40px;
+  display: block;
+  font-size: 2rem; }
+nav autocomplete .input-field input[type=search] ~ label i {
+  color: #AAA; }
+nav autocomplete .input-field input[type=search]:focus ~ label i {
+  color: black; }
+nav autocomplete ul {
+  position: fixed;
+  list-style-type: disc;
+  list-style-position: inside;
+  color: black;
+  background-color: white;
+  line-height: normal;
+  display: block;
+  z-index: 1;
+  top: 52px;
+  border: 1px solid #b9b9b9;
+  border-top: none; }
+  nav autocomplete ul li {
+    background-color: white;
+    float: none;
+    padding: 3px; }
+
+nav {
+  box-shadow: none;
+  height: calc(64px + 48px); }
+  nav .brand-logo, nav ul li a {
+    color: #fb4400; }
+  nav img {
+    height: 64px; }
+  nav a, nav li a {
+    color: black; }
+  nav #nav-top {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0;
+    height: 64px; }
+  nav #nav-bottom {
+    background-color: #FFF;
+    border-bottom: 1px solid #ebebeb;
+    height: 48px; }
+    nav #nav-bottom .nav-list {
+      position: relative;
+      background-color: #fff;
+      margin: 0 auto;
+      white-space: nowrap; }
+      nav #nav-bottom .nav-list .nav-item {
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 48px;
+        height: 48px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: .8px; }
+        nav #nav-bottom .nav-list .nav-item a {
+          color: #fb4400;
+          display: block;
+          height: 100%;
+          -webkit-transition: color 0.28s ease;
+          -moz-transition: color 0.28s ease;
+          -o-transition: color 0.28s ease;
+          -ms-transition: color 0.28s ease;
+          transition: color 0.28s ease; }
+          nav #nav-bottom .nav-list .nav-item a:hover {
+            color: #ff8d62; }
+        nav #nav-bottom .nav-list .nav-item.disabled a {
+          color: #ff8d62;
+          cursor: default; }
+        nav #nav-bottom .nav-list .nav-item.active {
+          background-color: #FFF;
+          border-bottom: 2px solid #fb4400; }
+
 /*# sourceMappingURL=app.css.map */

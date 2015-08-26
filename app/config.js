@@ -5,20 +5,25 @@ define({
     appDir: 'app',
     libDir: '../lib',
     routes: {
-        '/contact': {
+        '/home': {
+            location: 'test2/Test2',
+            label: 'test'
+        },
+        '/contacts': {
             location: 'contact/Contact',
             label: 'Contacts'
         },
-        '/contact/:id': {
+        '/contacts/:id': {
             location: 'contact/ContactDetail',
             label: 'Contact detail'
         }
     },
     modules: [
         'ng-breadcrumbs',
+        'autocomplete',
         'ngResource',
         'ngSanitize',
         'ngRoute'
     ],
-    defaultRedirect: '/contact'
+    defaultRedirect: '/home'
 });

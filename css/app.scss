@@ -2,4 +2,8 @@ $primary-color: #fb4400;
 $secondary-color: #fb4400;
 
 @import 'sass/materialize';
-@import 'breadcrumbs';
+@import 'sass/breadcrumbs';
+@import 'sass/basic';
+@import 'sass/searchbox';
+@import 'sass/navigation';
+

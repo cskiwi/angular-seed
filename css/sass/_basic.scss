@@ -1,0 +1,55 @@
+$primary-color: #fb4400;
+$secondary-color: #fb4400;
+
+$body-background-color: #FFF;
+$header-background-color: #f1f1f1;
+
+$height-fix: 115px;
+
+body {
+  background-color: $body-background-color;
+  font-size: 15px;
+  h1 {
+    font-size: 2em;
+    padding: 0;
+    color: $primary-color;
+  }
+  h2 {
+    font-size: 1.5em;
+    padding: 0;
+    color: $primary-color;
+  }
+  h3 {
+    font-size: 1.17em;
+    padding: 0;
+    color: $primary-color;
+  }
+  h4 {
+    font-size: 1.33em;
+    padding: 0;
+    color: $primary-color;
+  }
+  h5 {
+    font-size: 0.83em;
+    padding: 0;
+    color: $primary-color;
+  }
+  h6 {
+    font-size: 0.67em;
+    padding: 0;
+    color: $primary-color;
+  }
+  a {
+    color: $primary-color;
+  }
+
+  main {
+    min-height: calc(100vh - #{$height-fix});
+    margin: 0;
+    padding-bottom: 30px;
+    background-color: $body-background-color;
+    .card{
+      margin: 0.5rem 1rem;
+    }
+  }
+}

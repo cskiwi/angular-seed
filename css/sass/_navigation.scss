@@ -1,0 +1,66 @@
+$nav-top-height: 64px;
+$nav-bottom-height: 48px;
+$nav-bottom-color: $body-background-color;
+nav {
+  box-shadow: none;
+  height: calc(#{$nav-top-height} + #{$nav-bottom-height});
+
+  .brand-logo, ul li a {
+    color: $primary-color;
+  }
+  img {
+    height: 64px;
+  }
+  a, li a {
+    color: black;
+  }
+
+  #nav-top {
+    background-color: $header-background-color;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0;
+    height: $nav-top-height;
+  }
+  #nav-bottom {
+    background-color: $nav-bottom-color;
+    border-bottom: 1px solid #ebebeb;
+    height: $nav-bottom-height;
+
+    .nav-list {
+      position: relative;
+      background-color: $tabs-bg-color;
+      margin: 0 auto;
+      white-space: nowrap;
+
+      .nav-item {
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 48px;
+        height: 48px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+
+        a {
+          color: $tabs-text-color;
+          display: block;
+          height: 100%;
+          @include transition(color .28s ease);
+          &:hover {
+            color: lighten($tabs-text-color, 20%);
+          }
+        }
+
+        &.disabled a {
+          color: lighten($tabs-text-color, 20%);
+          cursor: default;
+        }
+        &.active {
+          background-color: $nav-bottom-color;
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+  }
+}

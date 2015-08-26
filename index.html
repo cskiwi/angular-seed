@@ -7,19 +7,45 @@
 <body>
 <header ng-controller="NavigationController">
     <nav>
-        <div class="nav-wrapper">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <a href="#/" class="brand-logo">Some Logo</a>
+        <!-- Desktop stuff -->
+        <div id="nav-top" class="row hide-on-med-and-down">
+            <div class="container">
+                <div class="col l2">&nbsp;
+                    <a href="#/hub" class="brand-logo"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a>
+                </div>
+                <div class="col l5">
+                    <autocomplete ng-model="query" attr-placeholder="" click-activation="true" data="items"
+                                  on-type="updateItems" on-select="searchItems"></autocomplete>
+                </div>
+
+                <div class="col l5">
+                    <ul class="right">
+                        <li><a href ng-bind="user"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="nav-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m4">
+                        <ul class="nav-list">
+                            <li class="nav-item" ng-class="getClass('/home')"><a href="#/home">Test 1</a></li>
+                            <li class="nav-item" ng-class="getClass('/contacts')"><a href="#/contacts">Test 2</a></li>
+                            <li class="nav-item" ng-class="getClass('/other')"><a href="#/other">Test 3</a></li>
+                            <li class="nav-item" ng-class="getClass('/last')"><a href="#/last">Test 4</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-    <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
 </header>
-
-<div ng-view></div>
-
+<main>
+    <div class="container">
+        <div ng-view id="view"></div>
+    </div>
+</main>
 <!-- Other scripts-->
 <script src="lib/jquery-2.1.4.min.js"></script>
 <script src="lib/materialize.min.js"></script>
@@ -31,6 +57,7 @@
 <script src="lib/angular-materialize.js"></script>
 <script src="lib/angular-route.min.js"></script>
 <script src="lib/ng-breadcrumbs.js"></script>
+<script src="lib/autocomplete.js"></script>
 
 <!-- load this last -->
 <script src="lib/require.js" data-main="app/main"></script>

@@ -1,17 +1,16 @@
-<div class="container">
-    <h2>Contacts</h2>
-    <table border="1" cellspacing="0" cellpadding="5">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Phone</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="contact in contacts">
-            <td><a ng-href="#/contact/{{ contact.id }}">{{ contact.name }}</a></td>
-            <td>{{ contact.phone }}</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+<h2>Contacts</h2>
+<table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="contact in contacts">
+        <td><a ng-href="#/contacts/{{ contact.id }}">{{ contact.name }}</a></td>
+        <td>{{ contact.phone }}</td>
+    </tr>
+    </tbody>
+</table>

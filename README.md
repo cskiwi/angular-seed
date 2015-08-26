@@ -57,7 +57,7 @@ define({
             location: 'subdir/Controller1',
             label: 'yet Other Label'
         },
-        '/more/with: {
+        '/more/with': {
             location: 'Controller1'
             label: 'last label'
         }        

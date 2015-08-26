@@ -1,4 +1,4 @@
-Angular + RequireJS Boilerplate
+Angular template
 ===============================
 
 This project is an application skeleton for an ideal AngularJS web app. You can use it with a minimal configuration to easily bootstrap your angular projects.

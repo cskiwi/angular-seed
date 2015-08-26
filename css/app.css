@@ -8329,6 +8329,7 @@ body {
   body main {
     min-height: calc(100vh - 115px);
     margin: 0;
+    margin-top: 130px;
     padding-bottom: 30px;
     background-color: #f0f0f0; }
     body main .card {
@@ -8375,26 +8376,28 @@ nav autocomplete ul {
 
 nav {
   transition: box-shadow .25s;
+  position: fixed;
+  top: 0;
   margin-bottom: 15px;
   height: calc(64px + 48px);
   color: #fff; }
   nav .brand-logo, nav ul li a {
-    color: #dddddd; }
+    color: #e6e6e6; }
   nav img {
     height: 64px; }
   nav a, nav li a {
-    color: #dddddd; }
+    color: #e6e6e6; }
   nav #nav-top {
-    background-color: #638EEA;
+    background-color: #fb4400;
     margin-bottom: 0;
     height: 64px;
     z-index: 1; }
   nav #nav-bottom {
-    background-color: #3367d6;
+    background-color: #c83600;
     height: 48px; }
     nav #nav-bottom .nav-list {
       position: relative;
-      background-color: #3367d6;
+      background-color: #c83600;
       margin: 0 auto;
       white-space: nowrap; }
       nav #nav-bottom .nav-list .nav-item {
@@ -8406,11 +8409,11 @@ nav {
         margin: 0;
         text-transform: uppercase;
         letter-spacing: .8px;
-        color: #dddddd; }
+        color: #e6e6e6; }
         nav #nav-bottom .nav-list .nav-item a {
           display: block;
           height: 100%;
-          color: #dddddd;
+          color: #e6e6e6;
           -webkit-transition: color 0.28s ease;
           -moz-transition: color 0.28s ease;
           -o-transition: color 0.28s ease;
@@ -8422,7 +8425,7 @@ nav {
           color: white;
           cursor: default; }
         nav #nav-bottom .nav-list .nav-item.active {
-          background-color: #3367d6;
-          border-bottom: 2px solid #fb4400; }
+          background-color: #c83600;
+          border-bottom: 3px solid #fb4400; }
 
 /*# sourceMappingURL=app.css.map */

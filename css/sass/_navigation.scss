@@ -1,12 +1,14 @@
 $nav-top-height: 64px;
 $nav-bottom-height: 48px;
-$nav-top-color: #638EEA;
-$nav-bottom-color: #3367d6;
-$nav-text-color: rgb(221, 221, 221);
+$nav-top-color: $primary-color;
+$nav-bottom-color: darken($nav-top-color, 10%);
+$nav-text-color: rgb(230, 230, 230);
 
 nav {
   @extend .z-depth-1;
   transition: box-shadow .25s;
+  position:fixed;
+  top: 0;
   margin-bottom: 15px;
   height: calc(#{$nav-top-height} + #{$nav-bottom-height});
   color: #fff;
@@ -54,7 +56,7 @@ nav {
           color: $nav-text-color;
           @include transition(color .28s ease);
           &:hover {
-            color: lighten($nav-text-color, 20%);
+            color: lighten($nav-text-color, 50%);
           }
         }
 
@@ -64,7 +66,7 @@ nav {
         }
         &.active {
           background-color: $nav-bottom-color;
-          border-bottom: 2px solid $primary-color;
+          border-bottom: 3px solid $nav-top-color;
         }
       }
     }

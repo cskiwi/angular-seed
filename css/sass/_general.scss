@@ -43,7 +43,7 @@ body {
 
   main {
     margin: 0;
-    margin-top: calc(#{$nav-top-height} + #{$nav-bottom-height});
+    margin-top: calc(#{$nav-top-height} + #{$nav-bottom-height} + 20px);
     padding-bottom: 30px;
     background-color: $body-background-color;
     .card{

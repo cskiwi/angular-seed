@@ -8340,7 +8340,7 @@ nav {
   transition: box-shadow .25s;
   position: fixed;
   top: 0;
-  height: calc(64px + 48px);
+  height: 64px + 48px;
   color: #fff; }
   nav .brand-logo, nav ul li a {
     color: #e6e6e6; }
@@ -8389,6 +8389,9 @@ nav {
           background-color: #c83600;
           border-bottom: 3px solid #ff7a49; }
 
+@media only screen and (max-width: 600px) {
+  nav {
+    height: 48px; } }
 body {
   background-color: #f0f0f0;
   font-size: 15px; }

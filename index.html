@@ -3,22 +3,27 @@
 <head>
     <title>Angular Seed Demo</title>
     <link href="css/app.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <header ng-controller="NavigationController">
     <nav>
         <!-- Desktop stuff -->
-        <div id="nav-top" class="row hide-on-med-and-down">
+        <div id="nav-top" class="row">
             <div class="container">
-                <div class="col l2">&nbsp;
-                    <a href="#/hub" class="brand-logo"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a>
+                <a href="#/hub" class="brand-logo"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a>
+
+                <div class="col show-on-medium-and-down">
+                    <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="500" data-closeonclick="false">
+                        <i class="mdi-navigation-menu white-text"></i>
+                    </a>
                 </div>
-                <div class="col l5">
+                <div class="col l5 offset-l2 hide-on-med-and-down">
                     <autocomplete ng-model="query" attr-placeholder="" click-activation="true" data="items"
                                   on-type="updateItems" on-select="searchItems"></autocomplete>
                 </div>
 
-                <div class="col l5">
+                <div class="col l5 hide-on-med-and-down  ">
                     <ul class="right">
                         <li><a href ng-bind="user"></a></li>
                     </ul>
@@ -31,13 +36,23 @@
                     <div class="col s12">
                         <ul class="nav-list">
                             <li class="nav-item" ng-class="getClass('/home')"><a href="#/home">Simple</a></li>
-                            <li class="nav-item" ng-class="getClass('/contacts')"><a href="#/contacts">Breadcrumbs</a></li>
+                            <li class="nav-item" ng-class="getClass('/contacts')"><a href="#/contacts">Breadcrumbs</a>
+                            </li>
                             <li class="nav-item" ng-class="getClass('/test3')"><a href="#/test3">Pushpin</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Not working-->
+        <ul id="slide-out" class="side-nav">
+            <li><a href="#/hub"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a></li>
+            <li><a href="#!">
+                <autocomplete ng-model="query" attr-placeholder="" click-activation="true" data="items"
+                              on-type="updateItems" on-select="searchItems"></autocomplete>
+            </a></li>
+        </ul>
     </nav>
 </header>
 <main>

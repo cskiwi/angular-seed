@@ -3,14 +3,13 @@ $nav-bottom-height: 48px !default;
 $nav-top-color: $primary-color !default;
 $nav-bottom-color: darken($nav-top-color, 10%) !default;
 $nav-text-color: rgb(230, 230, 230) !default;
-$nav-height:  calc(#{$nav-top-height} + #{$nav-bottom-height}) !default;
 
 nav {
   @extend .z-depth-1;
   transition: box-shadow .25s;
   position:fixed;
   top: 0;
-  height:$nav-height;
+  height:#{$nav-top-height} + #{$nav-bottom-height};
   color: #fff;
   .brand-logo, ul li a {
     color: $nav-text-color;
@@ -70,5 +69,11 @@ nav {
         }
       }
     }
+  }
+}
+
+@media #{$small-and-down}{
+  nav {
+    height: #{$nav-bottom-height};
   }
 }

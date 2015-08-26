@@ -1,10 +1,8 @@
-$primary-color: #fb4400;
-$secondary-color: #fb4400;
+@import 'breadcrumbs';
+@import 'searchbox';
+@import 'navigation';
 
-$body-background-color: #f0f0f0;
-$header-background-color: #009EFF;
-
-$height-fix: 115px;
+$body-background-color: #f0f0f0  !default;
 
 body {
   background-color: $body-background-color;
@@ -44,13 +42,15 @@ body {
   }
 
   main {
-    min-height: calc(100vh - #{$height-fix});
     margin: 0;
-    margin-top: 130px;
+    margin-top: calc(#{$nav-top-height} + #{$nav-bottom-height});
     padding-bottom: 30px;
     background-color: $body-background-color;
     .card{
       margin: 0.5rem 1rem;
     }
+  }
+  .table-of-contents a.active {
+    border-left-color: $primary-color;
   }
 }

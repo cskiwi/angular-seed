@@ -6,7 +6,7 @@ define({
     libDir: '../lib',
     routes: {
         '/home': {
-            location: 'test2/Test2',
+            location: 'home/Home',
             label: 'test'
         },
         '/contacts': {
@@ -18,7 +18,7 @@ define({
             label: 'Contact detail'
         },
     '/test3': {
-            location: 'test3/Test3',
+            location: 'pushPin/PushPin',
             label: 'longtest'
         }
     },

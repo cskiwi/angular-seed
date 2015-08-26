@@ -1,8 +1,9 @@
-$nav-top-height: 64px;
-$nav-bottom-height: 48px;
-$nav-top-color: $primary-color;
-$nav-bottom-color: darken($nav-top-color, 10%);
-$nav-text-color: rgb(230, 230, 230);
+$nav-top-height: 64px !default;
+$nav-bottom-height: 48px !default;
+$nav-top-color: $primary-color !default;
+$nav-bottom-color: darken($nav-top-color, 10%) !default;
+$nav-text-color: rgb(230, 230, 230) !default;
+$nav-height:  calc(#{$nav-top-height} + #{$nav-bottom-height}) !default;
 
 nav {
   @extend .z-depth-1;
@@ -10,7 +11,7 @@ nav {
   position:fixed;
   top: 0;
   margin-bottom: 15px;
-  height: calc(#{$nav-top-height} + #{$nav-bottom-height});
+  height:$nav-height;
   color: #fff;
   .brand-logo, ul li a {
     color: $nav-text-color;
@@ -66,7 +67,7 @@ nav {
         }
         &.active {
           background-color: $nav-bottom-color;
-          border-bottom: 3px solid $nav-top-color;
+          border-bottom: 3px solid  lighten($nav-top-color, 15%);
         }
       }
     }

@@ -17,18 +17,23 @@ define({
             location: 'contact/ContactDetail',
             label: 'Contact detail'
         },
-    '/test3': {
+        '/pushpin': {
             location: 'pushPin/PushPin',
             label: 'longtest'
+        },
+        '/paginate': {
+            location: 'paginate/paginate',
+            label: 'paginate'
         }
     },
     modules: [
+        'angularUtils.directives.dirPagination',
+        'ui.materialize',
         'ng-breadcrumbs',
         'autocomplete',
         'ngResource',
         'ngSanitize',
-        'ngRoute',
-        'ui.materialize'
+        'ngRoute'
     ],
     defaultRedirect: '/home'
 });

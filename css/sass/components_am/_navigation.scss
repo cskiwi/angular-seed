@@ -64,14 +64,20 @@ nav {
           cursor: default;
         }
         &.active {
-          background-color: $nav-bottom-color;
+          background-color: darken($nav-bottom-color, 10%);
           border-bottom: 3px solid  lighten($nav-top-color, 15%);
         }
       }
     }
   }
 }
-
+header {
+  #fab {
+    a.btn-floating {
+      background-color: complement($primary-color);
+    }
+  }
+}
 @media #{$small-and-down}{
   nav {
     height: #{$nav-bottom-height};

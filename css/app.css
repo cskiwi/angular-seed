@@ -8386,8 +8386,11 @@ nav {
           color: white;
           cursor: default; }
         nav #nav-bottom .nav-list .nav-item.active {
-          background-color: #c83600;
+          background-color: #952800;
           border-bottom: 3px solid #ff7a49; }
+
+header #fab a.btn-floating {
+  background-color: #00b7fb; }
 
 @media only screen and (max-width: 600px) {
   nav {

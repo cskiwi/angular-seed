@@ -2,6 +2,7 @@
 @import 'components_am/searchbox';
 @import 'components_am/navigation';
 @import 'components_am/table';
+@import 'components_am/animations';
 
 $body-background-color: #f0f0f0  !default;
 
@@ -43,7 +44,7 @@ body {
   }
 
   main {
-    margin: 0;
+    margin: 0; 
     margin-top: calc(#{$nav-top-height} + #{$nav-bottom-height} + 20px);
     padding-bottom: 30px;
     background-color: $body-background-color;
@@ -54,4 +55,19 @@ body {
   .table-of-contents a.active {
     border-left-color: $primary-color;
   }
+}
+
+.clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+
+  &:after {
+    clear: both;
+  }
+
 }

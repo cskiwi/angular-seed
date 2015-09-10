@@ -4,7 +4,7 @@ $nav-top-color: $primary-color !default;
 $nav-bottom-color: darken($nav-top-color, 10%) !default;
 $nav-text-color: rgb(230, 230, 230) !default;
 
-nav {
+nav, .side-nav {
   @extend .z-depth-1;
   transition: box-shadow .25s;
   position:fixed;
@@ -27,6 +27,36 @@ nav {
     height: $nav-top-height;
     z-index: 1;
   }
+  .input-field {
+    margin: 0;
+
+    input {
+      height: 100%;
+      font-size: 1.2rem;
+      border: none;
+
+      &:focus, &[type=text]:valid, &[type=password]:valid,
+      &[type=email]:valid, &[type=url]:valid, &[type=date]:valid {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    label {
+      top: 0;
+      left: 0;
+
+      i {
+        color: rgba(255,255,255,.7);
+        @include transition(color .3s);
+      }
+      &.active i { color: $navbar-font-color; }
+      &.active {
+        @include transform(translateY(0));
+      }
+    }
+
+  }
+
   #nav-bottom {
     background-color: $nav-bottom-color;
     height: $nav-bottom-height;

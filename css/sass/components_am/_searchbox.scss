@@ -1,5 +1,4 @@
-nav {
-
+nav, .side-nav {
   autocomplete {
     .input-field input[type="search"] {
       margin: 10px 0;
@@ -8,7 +7,7 @@ nav {
       background-color: white;
       border: 1px solid #b9b9b9;
       color: #AAA;
-      &:focus{
+      &:focus {
         border: 1px solid #b9b9b9;
       }
     }
@@ -43,7 +42,7 @@ nav {
       line-height: normal;
       display: block;
       z-index: 1;
-      top:52px;
+      top: 52px;
       border: 1px solid #b9b9b9;
       border-top: none;
       li {
@@ -53,5 +52,14 @@ nav {
       }
     }
 
+  }
+}
+
+.side-nav {
+  autocomplete {
+    .input-field input[type="search"] {
+      border-left: none;
+      border-right: none;
+    }
   }
 }

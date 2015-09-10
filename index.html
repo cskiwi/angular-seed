@@ -2,8 +2,14 @@
 <html>
 <head>
     <title>Angular Seed Demo</title>
+    <!-- if you have a sass compiler you can use the app.scss for styling -->
     <link href="css/app.css" rel="stylesheet"/>
+    <!-- Or if you want just normal css you can use the application.css -->
+    <link href="css/application.css" rel="stylesheet"/>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 </head>
 <body>
 <header ng-controller="NavigationController">
@@ -14,7 +20,7 @@
                 <a href="#/hub" class="brand-logo"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a>
 
                 <div class="col show-on-medium-and-down">
-                    <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="500" data-closeonclick="false">
+                    <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-closeonclick="false">
                         <i class="mdi-navigation-menu white-text"></i>
                     </a>
                 </div>
@@ -30,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div id="nav-bottom">
+        <div id="nav-bottom" class="hide-on-med-and-down">
             <div class="container">
                 <div class="row">
                     <div class="col s12">
@@ -45,17 +51,28 @@
                 </div>
             </div>
         </div>
-
-        <!-- Not working-->
-        <ul id="slide-out" class="side-nav">
-            <li><a href="#/hub"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a></li>
-            <li><a href="#!">
-                <autocomplete ng-model="query" attr-placeholder="" click-activation="true" data="items"
-                              on-type="updateItems" on-select="searchItems"></autocomplete>
-            </a></li>
-        </ul>
     </nav>
-    <div class="fixed-action-btn" id="fab" style="top: 65px; right: 10vw;">
+    <div id="nav-mobile" class="side-nav fixed hide-on-large-only">
+        <div class="row">
+            <div class="col s12">
+                <a href="#/hub"><img src="img/am_logo_kleur.gif" alt="Arcelor Mittal Gent"></a>
+            </div>
+        </div>
+        <div class="col s12">
+            <autocomplete ng-model="query" attr-placeholder="" click-activation="true" data="items"
+                          on-type="updateItems" on-select="searchItems"></autocomplete>
+        </div>
+
+        <ul class="nav-list">
+            <!-- U can use `close-nav` tag to make the sidebar close when you click on a link -->
+            <li class="nav-item" ng-class="getClass('/home')"><a href="#/home" close-nav>Simple</a></li>
+            <li class="nav-item" ng-class="getClass('/contacts')"><a href="#/contacts" close-nav>Breadcrumbs</a>
+            </li>
+            <li class="nav-item" ng-class="getClass('/pushpin')"><a href="#/pushpin" close-nav>Pushpin</a></li>
+            <li class="nav-item" ng-class="getClass('/paginate')"><a href="#/paginate" close-nav>Paginate</a></li>
+        </ul>
+    </div>
+    <div class="fixed-action-btn hide-on-med-and-down" id="fab" style="top: 65px; right: 10vw;">
         <a class="btn-floating btn-large" href="#/home">
             <i class="large mdi-content-add"></i>
         </a>

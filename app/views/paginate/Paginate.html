@@ -2,7 +2,9 @@
     <div dir-paginate="thing in things | itemsPerPage: 4" pagination-id="doc" ng-cloak>
         <h2>{{thing.title}}</h2>
 
-        <p>{{thing.content}}</p>
+
+        <p ng-if="$even">{{thing.content}}</p>
+        <p ng-if="$odd"><strong>{{thing.content}}</strong></p>
     </div>
 
     <dir-pagination-controls template-url="lib/dirPagination.tpl.html" pagination-id="doc"></dir-pagination-controls>

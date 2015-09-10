@@ -1,104 +1,114 @@
+$roboto-font-path: "../font/roboto2/";
+
 @import 'components_am/breadcrumbs';
 @import 'components_am/searchbox';
 @import 'components_am/navigation';
 @import 'components_am/table';
 @import 'components_am/animations';
+@import 'components_am/roboFont';
 
 $body-background-color: #f0f0f0 !default;
 
-body {
-  background-color: $body-background-color;
-  font-size: 15px;
-  h1 {
-    font-size: 2em;
-    padding: 0;
-    color: $primary-color;
-  }
-  h2 {
-    font-size: 1.5em;
-    padding: 0;
-    color: $primary-color;
-  }
-  h3 {
-    font-size: 1.17em;
-    padding: 0;
-    color: $primary-color;
-  }
-  h4 {
-    font-size: 1.33em;
-    padding: 0;
-    color: $primary-color;
-  }
-  h5 {
-    font-size: 0.83em;
-    padding: 0;
-    color: $primary-color;
-  }
-  h6 {
-    font-size: 0.67em;
-    padding: 0;
-    color: $primary-color;
-  }
-  a {
-    color: $primary-color;
-  }
+html {
+  font-family: "Roboto2", sans-serif;
 
-  main {
-    margin: 0;
-    margin-top: calc(#{$nav-top-height} + #{$nav-bottom-height} + 20px);
-    padding-bottom: 30px;
+  body {
+
     background-color: $body-background-color;
-    .card {
-      margin: 0.5rem 1rem;
+    font-size: 15px;
+    h1 {
+      font-size: 2em;
+      padding: 0;
+      color: $primary-color;
     }
-    .table-of-contents a.active {
-      border-left-color: $primary-color;
+    h2 {
+      font-size: 1.5em;
+      padding: 0;
+      color: $primary-color;
     }
-
-    textarea.materialize-textarea:not([readonly]), input[type="text"]:not([readonly]), input[type="search"]:not([readonly]), .select-wrapper input.select-dropdown {
+    h3 {
+      font-size: 1.17em;
+      padding: 0;
+      color: $primary-color;
+    }
+    h4 {
+      font-size: 1.33em;
+      padding: 0;
+      color: $primary-color;
+    }
+    h5 {
+      font-size: 0.83em;
+      padding: 0;
+      color: $primary-color;
+    }
+    h6 {
+      font-size: 0.67em;
+      padding: 0;
+      color: $primary-color;
+    }
+    a {
+      color: $primary-color;
+    }
+    strong {
+      font-weight: bold;
+    }
+    main {
       margin: 0;
-      margin-bottom: 10px;
-      display: block;
-      width: 100%;
-      height: 34px;
-      padding: 6px 12px;
-      font-size: 14px;
-      line-height: 1.42857143;
-      color: #555;
-      background-color: #fff;
-      background-image: none;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-      -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-      -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-      &:focus {
-        border: 1px solid #66afe9;
-        outline: 0;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+      margin-top: calc(#{$nav-top-height} + #{$nav-bottom-height} + 20px);
+      padding-bottom: 30px;
+      background-color: $body-background-color;
+      .card {
+        margin: 0.5rem 1rem;
+      }
+      .table-of-contents a.active {
+        border-left-color: $primary-color;
+      }
+
+      textarea.materialize-textarea:not([readonly]), input[type="text"]:not([readonly]), input[type="search"]:not([readonly]), .select-wrapper input.select-dropdown {
+        margin: 0;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        &:focus {
+          border: 1px solid #66afe9;
+          outline: 0;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
       }
     }
+
   }
 
-}
+  .clearfix {
+    *zoom: 1;
 
-.clearfix {
-  *zoom: 1;
+    &:before,
+    &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+    }
 
-  &:before,
-  &:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    &:after {
+      clear: both;
+    }
+
   }
-
-  &:after {
-    clear: both;
-  }
-
 }

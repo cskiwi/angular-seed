@@ -23,6 +23,7 @@ require(['config'], function(config) {
 
             // directives
             'directives/breadcrumbDirective',
+            'directives/closeNavDirective',
 
             // custom controllers
             'controllers/Navigation'

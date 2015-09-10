@@ -1,0 +1,46 @@
+$badge-new-bg-color: orange !default;
+$badge-archieved-bg-color: grey !default;
+$badge-approved-bg-color: green !default;
+$badge-rejected-bg-color: red !default;
+$badge-validation-bg-color: purple !default;
+
+$badge-new-color: #fff !default;
+$badge-archieved-color: #fff !default;
+$badge-approved-color: #fff !default;
+$badge-rejected-color: #fff !default;
+$badge-validation-color: #fff !default;
+
+span.badge {
+  min-width: 3rem;
+  padding: 0 6px;
+  text-align: center;
+  line-height: inherit;
+  color: #fff;
+  position: static;
+  @include box-sizing(border-box);
+  font-weight: 300;
+  font-size: 0.8rem;
+  background-color: #ff672f;
+  border-radius: 2px;
+
+  &.creatie {
+    color: $badge-new-color;
+    background-color: $badge-new-bg-color;
+  }
+  &.archieved {
+    color: $badge-archieved-color;
+    background-color: $badge-archieved-bg-color;
+  }
+  &.approved {
+    color: $badge-approved-color;
+    background-color: $badge-approved-bg-color;
+  }
+  &.rejected {
+    color: $badge-rejected-color;
+    background-color: $badge-rejected-bg-color;
+  }
+  &.validation {
+    color: $badge-validation-color;
+    background-color: $badge-validation-bg-color;
+  }
+}

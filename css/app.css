@@ -8517,6 +8517,36 @@ table th, table td {
   font-style: italic;
   font-weight: 700;
   src: local("Roboto2 Bold Italic"), local("RobotoCondensed-BoldItalic"), url("../font/roboto2/Roboto-BoldItalic.ttf") format("truetype"); }
+span.badge {
+  min-width: 3rem;
+  padding: 0 6px;
+  text-align: center;
+  line-height: inherit;
+  color: #fff;
+  position: static;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-size: 0.8rem;
+  background-color: #ff672f;
+  border-radius: 2px; }
+  span.badge.creatie {
+    color: #fff;
+    background-color: orange; }
+  span.badge.archieved {
+    color: #fff;
+    background-color: grey; }
+  span.badge.approved {
+    color: #fff;
+    background-color: green; }
+  span.badge.rejected {
+    color: #fff;
+    background-color: red; }
+  span.badge.validation {
+    color: #fff;
+    background-color: purple; }
+
 html {
   font-family: "Roboto2", sans-serif; }
   html body {

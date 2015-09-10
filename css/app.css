@@ -8582,9 +8582,12 @@ html {
       font-weight: bold; }
     html body main {
       margin: 0;
-      margin-top: calc(64px + 48px + 20px);
+      margin-top: calc(64px + 20px);
       padding-bottom: 30px;
       background-color: #f0f0f0; }
+      @media only screen and (min-width: 993px) {
+        html body main {
+          margin-top: calc(64px + 48px + 20px); } }
       html body main .card {
         margin: 0.5rem 1rem; }
       html body main .table-of-contents a.active {

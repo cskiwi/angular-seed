@@ -11,7 +11,7 @@ nav, .side-nav {
   top: 0;
   height:#{$nav-top-height} + #{$nav-bottom-height};
   color: #fff;
-  z-index: 500;
+  z-index: 998;
   .brand-logo, ul li a {
     color: $nav-text-color;
   }

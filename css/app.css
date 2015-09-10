@@ -8384,7 +8384,7 @@ nav, .side-nav {
   top: 0;
   height: 64px + 48px;
   color: #fff;
-  z-index: 500; }
+  z-index: 999; }
   nav .brand-logo, nav ul li a, .side-nav .brand-logo, .side-nav ul li a {
     color: #e6e6e6; }
   nav img, .side-nav img {

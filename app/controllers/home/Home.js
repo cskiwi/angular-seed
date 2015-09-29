@@ -6,6 +6,6 @@ define(['app'], function (app) {
     'use strict';
 
     app.register.controller('HomeController', function ($scope, $rootScope) {
-
+        // some stuff
     });
 });

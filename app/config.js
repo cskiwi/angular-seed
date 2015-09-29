@@ -24,6 +24,10 @@ define({
         '/paginate': {
             location: 'paginate/paginate',
             label: 'paginate'
+        },
+        '/forms': {
+            location: 'Form',
+            label: 'forms'
         }
     },
     modules: [
@@ -36,4 +40,4 @@ define({
         'ngRoute'
     ],
     defaultRedirect: '/home'
-});
+}); 

@@ -67,8 +67,12 @@ html {
       .table-of-contents a.active {
         border-left-color: $primary-color;
       }
+      .file-field .btn, .file-field .btn-large  {
+        height: 36px;
+        line-height: 36px;
+      }
 
-      textarea.materialize-textarea:not([readonly]), input[type="text"]:not([readonly]), input[type="search"]:not([readonly]), .select-wrapper input.select-dropdown {
+      textarea.materialize-textarea:not([readonly]), input[type]:not([readonly]),input[type], .select-wrapper input.select-dropdown {
         margin: 0;
         margin-bottom: 10px;
         display: block;
@@ -77,7 +81,6 @@ html {
         padding: 6px 12px;
         font-size: 14px;
         line-height: 1.42857143;
-        color: #555;
         background-color: #fff;
         background-image: none;
         -webkit-box-sizing: border-box;

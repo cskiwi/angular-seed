@@ -2,4 +2,5 @@ $primary-color: #fb4400;
 $secondary-color: lighten($primary-color, 10%);
 
 @import 'sass/materialize';
-@import 'sass/_general';
+@import 'sass/general';
+@import "prism.css";

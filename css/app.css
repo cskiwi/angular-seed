@@ -1,3 +1,4 @@
+@import url(prism.css);
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -8384,7 +8385,7 @@ nav, .side-nav {
   top: 0;
   height: 64px + 48px;
   color: #fff;
-  z-index: 999; }
+  z-index: 998; }
   nav .brand-logo, nav ul li a, .side-nav .brand-logo, .side-nav ul li a {
     color: #e6e6e6; }
   nav img, .side-nav img {
@@ -8593,7 +8594,10 @@ html {
         margin: 0.5rem 1rem; }
       html body main .table-of-contents a.active {
         border-left-color: #fb4400; }
-      html body main textarea.materialize-textarea:not([readonly]), html body main input[type="text"]:not([readonly]), html body main input[type="search"]:not([readonly]), html body main .select-wrapper input.select-dropdown {
+      html body main .file-field .btn, html body main .file-field .btn-large, html body main .file-field .btn-large {
+        height: 36px;
+        line-height: 36px; }
+      html body main textarea.materialize-textarea:not([readonly]), html body main input[type]:not([readonly]), html body main input[type], html body main .select-wrapper input.select-dropdown {
         margin: 0;
         margin-bottom: 10px;
         display: block;
@@ -8602,7 +8606,6 @@ html {
         padding: 6px 12px;
         font-size: 14px;
         line-height: 1.42857143;
-        color: #555;
         background-color: #fff;
         background-image: none;
         -webkit-box-sizing: border-box;
@@ -8615,7 +8618,7 @@ html {
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
-        html body main textarea.materialize-textarea:not([readonly]):focus, html body main input[type="text"]:not([readonly]):focus, html body main input[type="search"]:not([readonly]):focus, html body main .select-wrapper input.select-dropdown:focus {
+        html body main textarea.materialize-textarea:not([readonly]):focus, html body main input[type]:not([readonly]):focus, html body main input[type]:focus, html body main .select-wrapper input.select-dropdown:focus {
           border: 1px solid #66afe9;
           outline: 0;
           -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
